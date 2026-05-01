@@ -1,0 +1,37 @@
+[project]
+name = "worldcup-pool"
+version = "0.1.0"
+description = "World Cup 2026 prediction pool — Databricks App + Lakebase Autoscaling"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.6.0",
+    "sqlalchemy>=2.0.36",
+    "psycopg[binary]>=3.2.0",
+    "httpx>=0.27.0",
+    "databricks-sdk>=0.81.0",
+    "PyJWT[crypto]>=2.9.0",
+    "pandas>=3.0.2",
+    "pyarrow>=23.0.1",
+]
+
+[project.scripts]
+worldcup-sync = "worldcup_pool.scripts.sync_matches:main"
+worldcup-serve = "worldcup_pool.backend.run:main"
+worldcup-full-sim = "worldcup_pool.simulation.run_full:main"
+worldcup-time-machine = "worldcup_pool.scripts.time_machine_staging:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["worldcup_pool"]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.8.0",
+]

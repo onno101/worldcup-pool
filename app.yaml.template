@@ -1,0 +1,48 @@
+# Databricks App runtime (sits next to worldcup_pool/ and requirements.txt).
+# After deploy, set env vars in the App UI or replace values below.
+#
+# NOTE: This is a TEMPLATE. The actual app.yaml is generated at deploy time
+# by the predeploy script in databricks.yml, which substitutes __PLACEHOLDERS__
+# with bundle-target-specific values.  Do NOT edit app.yaml directly.
+
+# Multi-worker process model (see worldcup_pool.backend.run). Tune WEB_CONCURRENCY vs
+# DB_POOL_SIZE so workers * (DB_POOL_SIZE + DB_MAX_OVERFLOW) fits Lakebase connection limits.
+command:
+  - python
+  - -m
+  - worldcup_pool.backend.run
+
+env:
+  - name: WEB_CONCURRENCY
+    value: "2"
+  - name: DB_POOL_SIZE
+    value: "8"
+  - name: DB_MAX_OVERFLOW
+    value: "12"
+  - name: DB_POOL_TIMEOUT
+    value: "30"
+  - name: DB_POOL_RECYCLE
+    value: "1800"
+  - name: LAKEBASE_ENDPOINT
+    value: "__LAKEBASE_ENDPOINT__"
+  - name: LAKEBASE_DATABASE
+    value: "databricks_postgres"
+  - name: FOOTBALL_DATA_COMPETITION
+    value: "WC"
+  - name: FOOTBALL_DATA_TOKEN
+    value: ""   # Set in Databricks App UI or via secret scope (see README)
+  # Apply DDL on cold start (Lakebase-safe: IF NOT EXISTS). Ensures new columns exist before sync.
+  - name: INIT_SCHEMA_ON_START
+    value: "__INIT_SCHEMA__"
+  # When matches table is empty and FOOTBALL_DATA_TOKEN is set, pull fixtures once at startup (advisory lock).
+  - name: AUTO_SYNC_MATCHES_IF_EMPTY
+    value: "__AUTO_SYNC__"
+  - name: ADMIN_EMAILS
+    value: ""   # Comma-separated admin emails; set in Databricks App UI
+  # Hours before kickoff when match predictions close (API enforces from kickoff_utc).
+  # Tournament winner / top-scorer picks close this many hours before the earliest scheduled kickoff.
+  - name: PREDICTION_LOCK_BEFORE_KICKOFF_HOURS
+    value: "1"
+  # UTC instant after which tournament picks (winner + top scorer) become read-only.
+  - name: TOURNAMENT_PICKS_LOCK_AT_UTC
+    value: "__TOURNAMENT_LOCK__"

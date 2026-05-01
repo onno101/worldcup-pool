@@ -1,0 +1,5125 @@
+{
+  "tournament": {
+    "name": "2026 FIFA World Cup",
+    "format": "48 teams, 12 groups (A-L) of 4",
+    "advancement": "Top 2 per group (24) + best 8 third-place teams (8) = 32 teams in knockout"
+  },
+  "round_of_32": {
+    "M73": {
+      "home": "2A",
+      "away": "2B",
+      "description": "Runner-up Group A vs Runner-up Group B"
+    },
+    "M74": {
+      "home": "1E",
+      "away": "3rd(A/B/C/D/F)",
+      "description": "Winner Group E vs Best 3rd place from A/B/C/D/F"
+    },
+    "M75": {
+      "home": "1F",
+      "away": "2C",
+      "description": "Winner Group F vs Runner-up Group C"
+    },
+    "M76": {
+      "home": "1C",
+      "away": "2F",
+      "description": "Winner Group C vs Runner-up Group F"
+    },
+    "M77": {
+      "home": "1I",
+      "away": "3rd(C/D/F/G/H)",
+      "description": "Winner Group I vs Best 3rd place from C/D/F/G/H"
+    },
+    "M78": {
+      "home": "2E",
+      "away": "2I",
+      "description": "Runner-up Group E vs Runner-up Group I"
+    },
+    "M79": {
+      "home": "1A",
+      "away": "3rd(C/E/F/H/I)",
+      "description": "Winner Group A vs Best 3rd place from C/E/F/H/I"
+    },
+    "M80": {
+      "home": "1L",
+      "away": "3rd(E/H/I/J/K)",
+      "description": "Winner Group L vs Best 3rd place from E/H/I/J/K"
+    },
+    "M81": {
+      "home": "1D",
+      "away": "3rd(B/E/F/I/J)",
+      "description": "Winner Group D vs Best 3rd place from B/E/F/I/J"
+    },
+    "M82": {
+      "home": "1G",
+      "away": "3rd(A/E/H/I/J)",
+      "description": "Winner Group G vs Best 3rd place from A/E/H/I/J"
+    },
+    "M83": {
+      "home": "2K",
+      "away": "2L",
+      "description": "Runner-up Group K vs Runner-up Group L"
+    },
+    "M84": {
+      "home": "1H",
+      "away": "2J",
+      "description": "Winner Group H vs Runner-up Group J"
+    },
+    "M85": {
+      "home": "1B",
+      "away": "3rd(E/F/G/I/J)",
+      "description": "Winner Group B vs Best 3rd place from E/F/G/I/J"
+    },
+    "M86": {
+      "home": "1J",
+      "away": "2H",
+      "description": "Winner Group J vs Runner-up Group H"
+    },
+    "M87": {
+      "home": "1K",
+      "away": "3rd(D/E/I/J/L)",
+      "description": "Winner Group K vs Best 3rd place from D/E/I/J/L"
+    },
+    "M88": {
+      "home": "2D",
+      "away": "2G",
+      "description": "Runner-up Group D vs Runner-up Group G"
+    }
+  },
+  "round_of_16": {
+    "M89": {
+      "home": "W(M74)",
+      "away": "W(M77)",
+      "feeds_to": "M97"
+    },
+    "M90": {
+      "home": "W(M73)",
+      "away": "W(M75)",
+      "feeds_to": "M97"
+    },
+    "M91": {
+      "home": "W(M76)",
+      "away": "W(M78)",
+      "feeds_to": "M99"
+    },
+    "M92": {
+      "home": "W(M79)",
+      "away": "W(M80)",
+      "feeds_to": "M99"
+    },
+    "M93": {
+      "home": "W(M83)",
+      "away": "W(M84)",
+      "feeds_to": "M98"
+    },
+    "M94": {
+      "home": "W(M81)",
+      "away": "W(M82)",
+      "feeds_to": "M98"
+    },
+    "M95": {
+      "home": "W(M86)",
+      "away": "W(M88)",
+      "feeds_to": "M100"
+    },
+    "M96": {
+      "home": "W(M85)",
+      "away": "W(M87)",
+      "feeds_to": "M100"
+    }
+  },
+  "quarterfinals": {
+    "M97": {
+      "home": "W(M89)",
+      "away": "W(M90)",
+      "feeds_to": "M101"
+    },
+    "M98": {
+      "home": "W(M93)",
+      "away": "W(M94)",
+      "feeds_to": "M101"
+    },
+    "M99": {
+      "home": "W(M91)",
+      "away": "W(M92)",
+      "feeds_to": "M102"
+    },
+    "M100": {
+      "home": "W(M95)",
+      "away": "W(M96)",
+      "feeds_to": "M102"
+    }
+  },
+  "semifinals": {
+    "M101": {
+      "home": "W(M97)",
+      "away": "W(M98)",
+      "feeds_to": "Final"
+    },
+    "M102": {
+      "home": "W(M99)",
+      "away": "W(M100)",
+      "feeds_to": "Final"
+    }
+  },
+  "final": {
+    "home": "W(M101)",
+    "away": "W(M102)"
+  },
+  "third_place_match": {
+    "home": "L(M101)",
+    "away": "L(M102)"
+  },
+  "third_place_allocation": {
+    "EFGHIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "DFGHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "DEGHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "DEFHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "DEFGIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "DEFGHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "DEFGHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "DEFGHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "DEFGHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "CFGHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CEGHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "CEFHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "CEFGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CEFGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CEFGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CEFGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CEFGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "CDGHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDFHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "CDFGIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDFGHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDFGHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDFGHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDFGHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "CDEHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "CDEGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "CDEFIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "CDEFGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFGIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "CDEFGHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFGHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFGHJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "CDEFGHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "CDEFGHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "CDEFGHIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BFGHIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BEGHIJKL": {
+      "M74_1E_vs": "3B",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BEFHIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BEFGIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BEFGHJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BEFGHIKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BEFGHIJL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BEFGHIJK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BDGHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDFHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDFGIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDFGHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDFGHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDFGHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDFGHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BDEHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDEGIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDEGHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDEGHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDEGHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDEGHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BDEFIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BDEFGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFGIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BDEFGHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFGHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFGHJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BDEFGHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BDEFGHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BDEFGHIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCGHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCFHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCFGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCFGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCFGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCFGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCFGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCEHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCEGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCEGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCEGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCEGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCEGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BCEFIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BCEFGJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFGIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFGIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFGIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCEFGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFGHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCEFGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCEFGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCEFGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCDHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCDFIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BCDFGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFGIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCDFGHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFGHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "BCDFGHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDFGHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCDFGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "BCDEIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BCDEGJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEGIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEGIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEGIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCDEGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEGHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCDEGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCDEGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCDEFJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3E",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3E",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3E",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "BCDEFHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFHJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "BCDEFHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3I"
+    },
+    "BCDEFHIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "BCDEFGKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3E",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFGJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFGJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCDEFGIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3E",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFGIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3E",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "BCDEFGIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCDEFGHL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "BCDEFGHK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "BCDEFGHJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3J",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "BCDEFGHI": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "AFGHIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "AEGHIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "AEFHIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "AEFGIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "AEFGHJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "AEFGHIKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "AEFGHIJL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "AEFGHIJK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ADGHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ADFHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ADFGIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADFGHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADFGHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADFGHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADFGHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ADEHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ADEGIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ADEGHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEGHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEGHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEGHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ADEFIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ADEFGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFGIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ADEFGHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFGHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFGHJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ADEFGHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ADEFGHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ADEFGHIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ACGHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACFHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACFGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACFGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACFGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACFGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACFGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACEHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACEGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACEGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACEFIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ACEFGJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFGIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFGIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFGIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACEFGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFGHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ACEFGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACEFGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACEFGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ACDHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACDFIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3F",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ACDFGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFGIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACDFGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFGHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3H",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ACDFGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDFGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACDFGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ACDEIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ACDEGJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEGIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEGIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEGIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACDEGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEGHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ACDEGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACDEGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ACDEFJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3I",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ACDEFHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3D"
+    },
+    "ACDEFHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3I"
+    },
+    "ACDEFHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3D"
+    },
+    "ACDEFGKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFGJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFGJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ACDEFGIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFGIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ACDEFGIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ACDEFGHL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3F",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ACDEFGHK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ACDEFGHJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3J",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ACDEFGHI": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3E",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ABGHIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABFHIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABFGIJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABFGHJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABFGHIKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABFGHIJL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABFGHIJK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABEHIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEGIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEGHJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEGHIKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABEGHIJL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEGHIJK": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3H",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABEFIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFHJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFHIKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFHIJL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFHIJK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABEFGJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFGIKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFGIJL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFGIJK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABEFGHKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFGHJL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFGHJK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABEFGHIL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABEFGHIK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABEFGHIJ": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABDHIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDGIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDGHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDGHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDGHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDGHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABDFIJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABDFGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3F",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFGIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3F",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3F",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABDFGHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFGHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFGHJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3J"
+    },
+    "ABDFGHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDFGHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABDFGHIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEHJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEHIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEHIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEHIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEGIKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEGHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEGHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEGHJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABDEGHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEGHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEGHIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABDEFJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEFHKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFHJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABDEFHIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFHIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEFHIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABDEFGKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFGJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFGJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3J"
+    },
+    "ABDEFGIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFGIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEFGIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABDEFGHL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABDEFGHK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABDEFGHJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABDEFGHI": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCHIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCGIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCGHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCGHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCGHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCGHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCFIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCFGJKL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFGIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFGIJL": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFGIJK": {
+      "M74_1E_vs": "3F",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCFGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFGHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3J"
+    },
+    "ABCFGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCFGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCFGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEIJKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3C",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEGJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEGIKL": {
+      "M74_1E_vs": "3A",
+      "M77_1I_vs": "3C",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3I",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEGIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEGIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEGHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCEGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3H",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCEFJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEFHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCEFHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEFHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCEFGKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFGJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFGJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3J"
+    },
+    "ABCEFGIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFGIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEFGIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCEFGHL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCEFGHK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCEFGHJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCEFGHI": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDIJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDHJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDHIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDHIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDHIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDGJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDGIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3I",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDGIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDGIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3G",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDGHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDGHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDGHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3J"
+    },
+    "ABCDGHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDGHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDGHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDFJKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFIKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFIJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFIJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDFHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3F",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFHJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3H",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDFHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3F",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3F",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDFHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDFGKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFGJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFGJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3J"
+    },
+    "ABCDFGIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFGIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDFGIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDFGHL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3H",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDFGHK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDFGHJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDFGHI": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDEJKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEIKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3I",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEIJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEIJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDEHKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEHJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEHJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEHIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEHIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDEHIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEGKL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEGJL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEGJK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3J"
+    },
+    "ABCDEGIL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEGIK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDEGIJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3E",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDEGHL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEGHK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEGHJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEGHI": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEFKL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEFJL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEFJK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEFIL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEFIK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3I"
+    },
+    "ABCDEFIJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEFHL": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3D",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3F",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEFHK": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDEFHJ": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3J",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDEFHI": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3E",
+      "M87_1K_vs": "3D"
+    },
+    "ABCDEFGL": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3L"
+    },
+    "ABCDEFGK": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3K",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEFGJ": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3J",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEFGI": {
+      "M74_1E_vs": "3D",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3C",
+      "M80_1L_vs": "3I",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3E"
+    },
+    "ABCDEFGH": {
+      "M74_1E_vs": "3C",
+      "M77_1I_vs": "3F",
+      "M79_1A_vs": "3H",
+      "M80_1L_vs": "3E",
+      "M81_1D_vs": "3B",
+      "M82_1G_vs": "3A",
+      "M85_1B_vs": "3G",
+      "M87_1K_vs": "3D"
+    }
+  }
+}

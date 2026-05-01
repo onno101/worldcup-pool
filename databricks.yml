@@ -1,0 +1,89 @@
+bundle:
+  name: worldcup-pool
+
+workspace:
+  profile: DEFAULT
+
+include:
+  - resources/*.yml
+
+# `worldcup_pool/web_dist/` is gitignored but must be uploaded; bundle sync merges excludes with
+# .gitignore unless paths are listed here. See bundles reference -> sync -> include.
+sync:
+  include:
+    - worldcup_pool/web_dist/**
+    - app.yaml
+
+# Build Vite UI before upload, then copy into the package tree for runtime resolution.
+# Also generate a target-specific app.yaml from the committed template.
+experimental:
+  scripts:
+    predeploy: |
+      set -euo pipefail
+      cd ui
+      npm ci
+      npm run build
+      rm -rf ../worldcup_pool/web_dist
+      cp -R dist ../worldcup_pool/web_dist
+      cd ..
+      # Generate target-specific app.yaml from template
+      sed -e 's|__LAKEBASE_ENDPOINT__|${var.lakebase_endpoint}|g' \
+          -e 's|__AUTO_SYNC__|${var.auto_sync}|g' \
+          -e 's|__INIT_SCHEMA__|${var.init_schema}|g' \
+          -e 's|__TOURNAMENT_LOCK__|${var.tournament_lock}|g' \
+          app.yaml.template > app.yaml
+
+variables:
+  lakebase_endpoint:
+    description: Full Lakebase Autoscale endpoint resource name
+    default: "projects/worldcup-pool/branches/production/endpoints/primary"
+  football_data_competition:
+    default: "WC"
+  auto_sync:
+    description: Auto-sync matches from football-data.org on empty DB (true/false)
+    default: "true"
+  init_schema:
+    description: Run DDL schema init on app cold start (true/false)
+    default: "true"
+  tournament_lock:
+    description: UTC instant after which tournament picks are read-only (ISO8601)
+    default: "2026-06-11T18:00:00+00:00"
+  # Unity Catalog destination for the Lakebase -> Delta demo sync (powers the
+  # AI/BI dashboard, Genie, and any SQL consumer). Schema is auto-created on
+  # first run; catalog must already exist and the job identity must have
+  # USE_CATALOG + CREATE_SCHEMA + MODIFY on it.
+  demo_catalog:
+    description: UC catalog receiving the Lakebase mirror (default main)
+    default: "main"
+  demo_schema:
+    description: UC schema receiving the Lakebase mirror (auto-created)
+    default: "worldcup_pool"
+  # SQL warehouse ID that the AI/BI dashboard runs its queries on. Bundle
+  # deploy will fail until this is set -- either here in a target override or
+  # via `databricks bundle deploy -t dev --var dashboard_warehouse_id=<id>`.
+  dashboard_warehouse_id:
+    description: SQL warehouse ID the demo dashboard queries against
+    default: ""
+
+targets:
+  dev:
+    default: true
+    mode: development
+    # Set dashboard_warehouse_id via: databricks bundle deploy -t dev --var dashboard_warehouse_id=<YOUR_ID>
+
+  simulation:
+    mode: development
+    variables:
+      lakebase_endpoint: "projects/worldcup-pool/branches/simulation/endpoints/primary"
+      auto_sync: "false"
+      init_schema: "false"
+      tournament_lock: "2026-04-01T00:00:00+00:00"
+      # Set dashboard_warehouse_id via: databricks bundle deploy -t simulation --var dashboard_warehouse_id=<YOUR_ID>
+
+  prod:
+    mode: production
+    variables:
+      auto_sync: "true"
+      init_schema: "true"
+    # Prod intentionally has no dashboard_warehouse_id default -- set it via
+    # `--var dashboard_warehouse_id=<id>` or a target-specific override.

@@ -1,0 +1,13 @@
+# AI/BI (Lakeview) dashboard for the Lakebase demo.
+# Pointed at the Delta mirror written by the `lakebase_to_delta` task in
+# `worldcup_sync_matches`. Make sure:
+#   - `var.dashboard_warehouse_id` is set (no default — deploy will fail fast)
+#   - The job has run at least once so the target schema/tables exist
+#   - The serialized JSON references ${var.demo_catalog}.${var.demo_schema}.*
+#     fully-qualified tables so queries resolve regardless of warehouse default.
+resources:
+  dashboards:
+    worldcup_demo_dashboard:
+      display_name: "[${bundle.target}] World Cup Pool — Lakebase Demo"
+      file_path: ./worldcup_demo.lvdash.json
+      warehouse_id: ${var.dashboard_warehouse_id}

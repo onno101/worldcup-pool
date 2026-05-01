@@ -1,0 +1,256 @@
+{
+  "datasets": [
+    {
+      "name": "ds_kpi",
+      "displayName": "KPI summary",
+      "queryLines": [
+        "SELECT",
+        "  (SELECT COUNT(DISTINCT user_id) FROM main.worldcup_pool.user_profiles_public) AS participants,",
+        "  (SELECT COUNT(*) FROM main.worldcup_pool.match_predictions WHERE home_goals IS NOT NULL) AS match_picks,",
+        "  (SELECT COUNT(*) FROM main.worldcup_pool.tournament_predictions WHERE tournament_winner_team_code IS NOT NULL) AS champion_picks"
+      ]
+    },
+    {
+      "name": "ds_champions",
+      "displayName": "Champion picks by country",
+      "queryLines": [
+        "SELECT",
+        "  tournament_winner_team_code AS team,",
+        "  COUNT(*) AS picks",
+        "FROM main.worldcup_pool.tournament_predictions",
+        "WHERE tournament_winner_team_code IS NOT NULL",
+        "GROUP BY tournament_winner_team_code",
+        "ORDER BY picks DESC",
+        "LIMIT 15"
+      ]
+    },
+    {
+      "name": "ds_picks_over_time",
+      "displayName": "Match picks over time",
+      "queryLines": [
+        "SELECT",
+        "  date_trunc('HOUR', updated_at) AS hour,",
+        "  COUNT(*) AS picks",
+        "FROM main.worldcup_pool.match_predictions",
+        "WHERE updated_at IS NOT NULL AND home_goals IS NOT NULL",
+        "GROUP BY date_trunc('HOUR', updated_at)",
+        "ORDER BY hour"
+      ]
+    },
+    {
+      "name": "ds_leaderboard",
+      "displayName": "Pool participants",
+      "queryLines": [
+        "SELECT",
+        "  COALESCE(p.display_name, p.user_id) AS participant,",
+        "  p.nationality,",
+        "  t.tournament_winner_team_code AS champion_pick,",
+        "  p.updated_at AS profile_updated",
+        "FROM main.worldcup_pool.user_profiles_public p",
+        "LEFT JOIN main.worldcup_pool.tournament_predictions t",
+        "  ON p.user_id = t.user_id",
+        "ORDER BY p.updated_at DESC NULLS LAST",
+        "LIMIT 100"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "overview",
+      "displayName": "Pool overview",
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layout": [
+        {
+          "widget": {
+            "name": "title",
+            "multilineTextboxSpec": {
+              "lines": [
+                "## World Cup Pool — live from Lakebase"
+              ]
+            }
+          },
+          "position": {"x": 0, "y": 0, "width": 6, "height": 1}
+        },
+        {
+          "widget": {
+            "name": "subtitle",
+            "multilineTextboxSpec": {
+              "lines": [
+                "Every card on this dashboard reads from a Delta mirror of the pool's Lakebase (Postgres) OLTP tables. The mirror is refreshed by a scheduled job task — no custom pipeline, no reverse ETL."
+              ]
+            }
+          },
+          "position": {"x": 0, "y": 1, "width": 6, "height": 1}
+        },
+        {
+          "widget": {
+            "name": "kpi_participants",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ds_kpi",
+                  "fields": [
+                    {"name": "participants", "expression": "`participants`"}
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {"fieldName": "participants", "displayName": "Participants"}
+              },
+              "frame": {"showTitle": true, "title": "Participants"}
+            }
+          },
+          "position": {"x": 0, "y": 2, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "kpi_match_picks",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ds_kpi",
+                  "fields": [
+                    {"name": "match_picks", "expression": "`match_picks`"}
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {"fieldName": "match_picks", "displayName": "Match picks"}
+              },
+              "frame": {"showTitle": true, "title": "Match picks"}
+            }
+          },
+          "position": {"x": 2, "y": 2, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "kpi_champion_picks",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ds_kpi",
+                  "fields": [
+                    {"name": "champion_picks", "expression": "`champion_picks`"}
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "counter",
+              "encodings": {
+                "value": {"fieldName": "champion_picks", "displayName": "Champion picks"}
+              },
+              "frame": {"showTitle": true, "title": "Champion picks"}
+            }
+          },
+          "position": {"x": 4, "y": 2, "width": 2, "height": 3}
+        },
+        {
+          "widget": {
+            "name": "chart_champions",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ds_champions",
+                  "fields": [
+                    {"name": "team", "expression": "`team`"},
+                    {"name": "picks", "expression": "`picks`"}
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {"fieldName": "team", "scale": {"type": "categorical"}, "displayName": "Team"},
+                "y": {"fieldName": "picks", "scale": {"type": "quantitative"}, "displayName": "Picks"}
+              },
+              "frame": {"showTitle": true, "title": "Champion picks by country (top 15)"}
+            }
+          },
+          "position": {"x": 0, "y": 5, "width": 3, "height": 6}
+        },
+        {
+          "widget": {
+            "name": "chart_picks_over_time",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ds_picks_over_time",
+                  "fields": [
+                    {"name": "hour", "expression": "`hour`"},
+                    {"name": "picks", "expression": "`picks`"}
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "line",
+              "encodings": {
+                "x": {"fieldName": "hour", "scale": {"type": "temporal"}, "displayName": "Hour (UTC)"},
+                "y": {"fieldName": "picks", "scale": {"type": "quantitative"}, "displayName": "Match picks"}
+              },
+              "frame": {"showTitle": true, "title": "Match picks saved, per hour"}
+            }
+          },
+          "position": {"x": 3, "y": 5, "width": 3, "height": 6}
+        },
+        {
+          "widget": {
+            "name": "table_leaderboard",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ds_leaderboard",
+                  "fields": [
+                    {"name": "participant", "expression": "`participant`"},
+                    {"name": "nationality", "expression": "`nationality`"},
+                    {"name": "champion_pick", "expression": "`champion_pick`"},
+                    {"name": "profile_updated", "expression": "`profile_updated`"}
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {"fieldName": "participant", "displayName": "Participant"},
+                  {"fieldName": "nationality", "displayName": "Nationality"},
+                  {"fieldName": "champion_pick", "displayName": "Champion pick"},
+                  {"fieldName": "profile_updated", "displayName": "Profile updated (UTC)"}
+                ]
+              },
+              "frame": {"showTitle": true, "title": "Participants"}
+            }
+          },
+          "position": {"x": 0, "y": 11, "width": 6, "height": 6}
+        }
+      ]
+    }
+  ]
+}

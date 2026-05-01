@@ -1,0 +1,15 @@
+# Bundle sync ignore (used instead of .gitignore when this file exists).
+# Do not ignore worldcup_pool/web_dist/ (SPA copied there during bundle predeploy).
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+ui/node_modules/
+# Packaged SPA for Databricks Apps (copied from ui/dist during bundle predeploy)
+# worldcup_pool/web_dist/ must NOT be ignored — keep this line absent or commented.
+.env
+*.local

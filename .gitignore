@@ -1,0 +1,19 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+dist/
+*.egg-info/
+ui/node_modules/
+ui/dist/
+worldcup_pool/web_dist/
+.env
+*.local
+
+# Generated at deploy time from app.yaml.template (see databricks.yml predeploy)
+app.yaml
+
+# Databricks bundle state
+.databricks/
