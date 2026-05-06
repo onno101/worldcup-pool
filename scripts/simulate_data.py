@@ -409,6 +409,22 @@ TOP_SCORERS = [
     "Núñez", "Havertz", "Luis Díaz", "En-Nesyri",
 ]
 
+# Map scorer names to their country code + name (required for scoring engine)
+SCORER_COUNTRY: dict[str, tuple[str, str]] = {
+    "Mbappé": ("FRA", "France"), "Haaland": ("NOR", "Norway"),
+    "Messi": ("ARG", "Argentina"), "Kane": ("ENG", "England"),
+    "Vinícius Jr.": ("BRA", "Brazil"), "Ronaldo": ("POR", "Portugal"),
+    "Bellingham": ("ENG", "England"), "Yamal": ("ESP", "Spain"),
+    "Musiala": ("GER", "Germany"), "Isak": ("SWE", "Sweden"),
+    "Pulisic": ("USA", "United States"), "Son Heung-min": ("KOR", "South Korea"),
+    "Salah": ("EGY", "Egypt"), "Depay": ("NED", "Netherlands"),
+    "Gakpo": ("NED", "Netherlands"), "Álvarez": ("ARG", "Argentina"),
+    "Morata": ("ESP", "Spain"), "Lukaku": ("BEL", "Belgium"),
+    "Núñez": ("URU", "Uruguay"), "Havertz": ("GER", "Germany"),
+    "Luis Díaz": ("COL", "Colombia"), "En-Nesyri": ("MAR", "Morocco"),
+    "Endrick": ("BRA", "Brazil"), "Olmo": ("ESP", "Spain"),
+}
+
 
 def generate_users(n: int, rng: random.Random) -> list[dict]:
     """Generate n fake user records."""
@@ -696,17 +712,26 @@ def main():
         print("\n=== Creating tournament predictions ===")
 
         for u in users:
+            scorer_name = u["top_scorer_pick"]
+            cc, cn = SCORER_COUNTRY.get(scorer_name, ("?", "Unknown"))
+            notes = {
+                "top_scorers": [
+                    {"player_name": scorer_name, "country_code": cc, "country_name": cn}
+                ]
+            }
             conn.execute(text("""
-                INSERT INTO tournament_predictions (user_id, tournament_winner_team_code, top_scorer_player_name, created_at, updated_at)
-                VALUES (:uid, :winner, :scorer, NOW(), NOW())
+                INSERT INTO tournament_predictions (user_id, tournament_winner_team_code, top_scorer_player_name, notes_json, created_at, updated_at)
+                VALUES (:uid, :winner, :scorer, CAST(:nj AS jsonb), NOW(), NOW())
                 ON CONFLICT (user_id) DO UPDATE SET
                     tournament_winner_team_code = EXCLUDED.tournament_winner_team_code,
                     top_scorer_player_name = EXCLUDED.top_scorer_player_name,
+                    notes_json = EXCLUDED.notes_json,
                     updated_at = NOW()
             """), {
                 "uid": u["user_id"],
                 "winner": u["tournament_winner_pick"],
-                "scorer": u["top_scorer_pick"],
+                "scorer": scorer_name,
+                "nj": json.dumps(notes),
             })
 
         conn.commit()
