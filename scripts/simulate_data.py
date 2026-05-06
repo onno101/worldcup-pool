@@ -206,7 +206,7 @@ R32_RESULTS = [
     (1, 2, "ECU"),     # Ecuador shocks South Korea!
     (0, 1, "TUR"),     # Turkey edges Morocco
     (2, 1, "JPN"),     # Japan continues their giant-killing form
-    (0, 1, "URU"),     # Uruguay grinds past Ivory Coast
+    (1, 0, "URU"),     # Uruguay grinds past Ivory Coast
 ]
 
 # R16 matchups (winners from R32)
