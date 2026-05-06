@@ -298,8 +298,8 @@ def make_goal_events(
             minute = rng.randint(1, 90)
         used_minutes.add(minute)
         events.append({
-            "team": home,
-            "player": rng.choice(h_scorers),
+            "team_code": home,
+            "player_name": rng.choice(h_scorers),
             "minute": minute,
             "type": "REGULAR" if rng.random() > 0.1 else "PENALTY",
         })
@@ -309,8 +309,8 @@ def make_goal_events(
             minute = rng.randint(1, 90)
         used_minutes.add(minute)
         events.append({
-            "team": away,
-            "player": rng.choice(a_scorers),
+            "team_code": away,
+            "player_name": rng.choice(a_scorers),
             "minute": minute,
             "type": "REGULAR" if rng.random() > 0.1 else "PENALTY",
         })
@@ -548,7 +548,7 @@ def main():
 
             events = make_goal_events(home, away, h_goals, a_goals, rng)
             for e in events:
-                scorer_goals[e["player"]] = scorer_goals.get(e["player"], 0) + 1
+                scorer_goals[e["player_name"]] = scorer_goals.get(e["player_name"], 0) + 1
 
             conn.execute(text("""
                 UPDATE matches SET
@@ -578,7 +578,7 @@ def main():
 
             events = make_goal_events(home, away, h_goals, a_goals, rng)
             for e in events:
-                scorer_goals[e["player"]] = scorer_goals.get(e["player"], 0) + 1
+                scorer_goals[e["player_name"]] = scorer_goals.get(e["player_name"], 0) + 1
 
             conn.execute(text("""
                 UPDATE matches SET
@@ -618,7 +618,7 @@ def main():
                 h_goals, a_goals, winner = result
                 events = make_goal_events(home, away, h_goals, a_goals, rng)
                 for e in events:
-                    scorer_goals[e["player"]] = scorer_goals.get(e["player"], 0) + 1
+                    scorer_goals[e["player_name"]] = scorer_goals.get(e["player_name"], 0) + 1
 
                 conn.execute(text("""
                     UPDATE matches SET
