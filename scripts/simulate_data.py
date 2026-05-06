@@ -188,25 +188,25 @@ R32_MATCHUPS = [
     ("URU", "CIV"),    # 537430 Jul4
 ]
 
-# R32 results
+# R32 results: (home_score, away_score) — winner is derived from score.
+# For draws (penalty shootouts), add penalty winner as 3rd element.
 R32_RESULTS = [
-    # (home_score, away_score, winner) — winner = advancing team
-    (2, 1, "MEX"),     # Mexico edges Senegal
-    (3, 0, "BRA"),     # Brazil cruises past Ghana
+    (2, 1),            # Mexico edges Senegal
+    (3, 0),            # Brazil cruises past Ghana
     (1, 1, "SUI"),     # Switzerland wins on pens
-    (2, 0, "NED"),     # Netherlands handles Algeria
-    (1, 2, "CRO"),     # Croatia upsets Germany!
+    (2, 0),            # Netherlands handles Algeria
+    (1, 2),            # Croatia upsets Germany!
     (0, 0, "USA"),     # USA wins on pens in home crowd thriller
-    (3, 1, "BEL"),     # Belgium too strong for Sweden
-    (4, 0, "ESP"),     # Spain demolishes Czechia
-    (3, 0, "FRA"),     # France cruises
-    (2, 1, "ARG"),     # Argentina edges Norway (Haaland consolation goal)
-    (2, 0, "POR"),     # Portugal comfortable
+    (3, 1),            # Belgium too strong for Sweden
+    (4, 0),            # Spain demolishes Czechia
+    (3, 0),            # France cruises
+    (2, 1),            # Argentina edges Norway (Haaland consolation goal)
+    (2, 0),            # Portugal comfortable
     (1, 1, "ENG"),     # England wins pens vs Colombia (classic)
-    (1, 2, "ECU"),     # Ecuador shocks South Korea!
-    (0, 1, "TUR"),     # Turkey edges Morocco
-    (2, 1, "JPN"),     # Japan continues their giant-killing form
-    (1, 0, "URU"),     # Uruguay grinds past Ivory Coast
+    (1, 2),            # Ecuador shocks South Korea!
+    (0, 1),            # Turkey edges Morocco
+    (2, 1),            # Japan continues their giant-killing form
+    (1, 0),            # Uruguay grinds past Ivory Coast
 ]
 
 # R16 matchups (winners from R32)
@@ -224,10 +224,10 @@ R16_MATCHUPS = [
 
 R16_RESULTS = [
     # First 4 finished
-    (1, 3, "BRA"),     # Brazil demolishes Mexico
+    (1, 3),            # Brazil demolishes Mexico
     (2, 2, "NED"),     # Netherlands wins on pens vs Croatia
-    (2, 1, "USA"),     # USA edges Belgium! Home crowd goes wild
-    (3, 1, "ESP"),     # Spain dominates Switzerland
+    (2, 1),            # USA edges Belgium! Home crowd goes wild
+    (3, 1),            # Spain dominates Switzerland
     # Last 4 not yet played
     None, None, None, None,
 ]
@@ -316,6 +316,30 @@ def make_goal_events(
         })
     events.sort(key=lambda e: e["minute"])
     return events
+
+
+def derive_winner(
+    home: str, away: str, result: tuple
+) -> tuple[int, int, str | None]:
+    """Derive winner from a result tuple.
+
+    Format: (home_score, away_score) for decisive results,
+            (home_score, away_score, penalty_winner) for draws.
+    Returns (home_score, away_score, winner_team_code).
+    """
+    h_goals, a_goals = result[0], result[1]
+    if h_goals > a_goals:
+        return h_goals, a_goals, home
+    elif a_goals > h_goals:
+        return h_goals, a_goals, away
+    else:
+        # Draw — penalty winner must be specified
+        if len(result) < 3:
+            raise ValueError(
+                f"Draw {home} {h_goals}-{a_goals} {away} needs a penalty winner "
+                f"as 3rd tuple element"
+            )
+        return h_goals, a_goals, result[2]
 
 
 # ── Fake users ──────────────────────────────────────────────────────
@@ -590,7 +614,7 @@ def main():
         for i, (row, matchup, result) in enumerate(zip(r32_rows, R32_MATCHUPS, R32_RESULTS)):
             mid = row[0]
             home, away = matchup
-            h_goals, a_goals, winner = result
+            h_goals, a_goals, winner = derive_winner(home, away, result)
 
             events = make_goal_events(home, away, h_goals, a_goals, rng)
             for e in events:
@@ -631,7 +655,7 @@ def main():
             result = R16_RESULTS[i]
 
             if result is not None:
-                h_goals, a_goals, winner = result
+                h_goals, a_goals, winner = derive_winner(home, away, result)
                 events = make_goal_events(home, away, h_goals, a_goals, rng)
                 for e in events:
                     scorer_goals[e["player_name"]] = scorer_goals.get(e["player_name"], 0) + 1
