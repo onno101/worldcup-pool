@@ -1,8 +1,7 @@
-<p align="center">
-  <img src="ui/public/logos/wc2026.svg" width="80" alt="World Cup 2026" />
-</p>
-
-<h1 align="center">World Cup 2026 Prediction Pool</h1>
+<h1 align="center">
+  <img src="ui/public/favicon.png" width="36" alt="" /><br/>
+  World Cup 2026 Prediction Pool
+</h1>
 
 <p align="center">
   <strong>Run a World Cup prediction pool for your team, company, or friends — deployed in minutes on Databricks.</strong>
