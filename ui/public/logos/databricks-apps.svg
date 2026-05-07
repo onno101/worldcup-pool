@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 32" fill="none">
+  <!-- App grid icon -->
+  <rect x="4" y="4" width="10" height="10" rx="2" fill="#FF3621"/>
+  <rect x="17" y="4" width="10" height="10" rx="2" fill="#FF3621" opacity="0.7"/>
+  <rect x="4" y="17" width="10" height="10" rx="2" fill="#FF3621" opacity="0.7"/>
+  <rect x="17" y="17" width="10" height="10" rx="2" fill="#FF3621" opacity="0.4"/>
+  <!-- Text -->
+  <text x="34" y="21" font-family="system-ui,-apple-system,sans-serif" font-size="14" font-weight="600" fill="#1B3A4B">Apps</text>
+</svg>

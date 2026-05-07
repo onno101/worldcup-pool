@@ -968,6 +968,12 @@ export default function App() {
     <div className="app-shell">
       <header className="hero">
         <div className="hero-inner">
+          <div className="powered-by-bar">
+            <span className="powered-by-label">Powered by</span>
+            <img className="powered-by-logo" src="/logos/lakebase.svg" alt="Lakebase" />
+            <span className="powered-by-sep">&</span>
+            <img className="powered-by-logo" src="/logos/databricks-apps.svg" alt="Databricks Apps" />
+          </div>
           <div className="hero-top">
             <div>
               <div className="host-flags" aria-label="Host countries">

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 32" fill="none">
+  <!-- Lakebase icon: three stacked bars with wave (matches official branding) -->
+  <rect x="2" y="3" width="22" height="7" rx="1.5" fill="#F5B8AA"/>
+  <rect x="2" y="12.5" width="22" height="7" rx="1.5" fill="#F2A090"/>
+  <path d="M6 16c3-2 5.5 2 9 0s5.5 2 7 0" stroke="rgba(255,255,255,0.5)" stroke-width="1.4" fill="none"/>
+  <rect x="2" y="22" width="22" height="7" rx="1.5" fill="#EF6B4A"/>
+  <!-- Text -->
+  <text x="30" y="22.5" font-family="system-ui,-apple-system,'Segoe UI',sans-serif" font-size="16" font-weight="500" fill="#1B3A4B">Lakebase</text>
+</svg>
