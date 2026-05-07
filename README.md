@@ -108,12 +108,12 @@ The pool uses [football-data.org](https://www.football-data.org/) for fixtures, 
 | Plan | Cost | Fixtures & live scores | Goal scorer events |
 |------|------|------------------------|--------------------|
 | **Free Tier** | Free | Yes | No — scorer points won't be awarded |
-| **Free + Deep Data** | Free (requires application) | Yes | Yes — required for top-scorer scoring |
-| Paid tiers | Paid | Yes | Yes |
+| **Free + Deep Data** | €29 / month | Yes | Yes — required for top-scorer scoring |
+| Higher paid tiers | Paid | Yes | Yes |
 
-If you want the **top scorer** picks and the per-match scorer points to actually score, you need the **Free + Deep Data** key (or a paid tier). The standard free key returns matches and scores but omits the goal-event detail the sync job needs to credit scorer points.
+If you want the **top scorer** picks and the per-match scorer points to actually score, you need the **Free + Deep Data** add-on (€29/month at the time of writing) or a higher paid tier. The standard free key returns matches and scores but omits the goal-event detail the sync job needs to credit scorer points.
 
-Apply for Deep Data access from your account page after registering at [football-data.org/client/register](https://www.football-data.org/client/register). Without it, the app still runs — outcome / exact-score / advancer points all work, but every match's `scorer` column will be 0.
+Subscribe to Deep Data from your account page after registering at [football-data.org/client/register](https://www.football-data.org/client/register). Without it, the app still runs — outcome / exact-score / advancer points all work, but every match's `scorer` column will be 0.
 
 ## Configuration
 
