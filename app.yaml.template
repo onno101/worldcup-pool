@@ -38,7 +38,7 @@ env:
   - name: AUTO_SYNC_MATCHES_IF_EMPTY
     value: "__AUTO_SYNC__"
   - name: ADMIN_EMAILS
-    value: ""   # Comma-separated admin emails; set in Databricks App UI
+    value: "__ADMIN_EMAILS__"
   # Hours before kickoff when match predictions close (API enforces from kickoff_utc).
   # Tournament winner / top-scorer picks close this many hours before the earliest scheduled kickoff.
   - name: PREDICTION_LOCK_BEFORE_KICKOFF_HOURS

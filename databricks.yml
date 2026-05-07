@@ -31,6 +31,7 @@ experimental:
           -e 's|__AUTO_SYNC__|${var.auto_sync}|g' \
           -e 's|__INIT_SCHEMA__|${var.init_schema}|g' \
           -e 's|__TOURNAMENT_LOCK__|${var.tournament_lock}|g' \
+          -e 's|__ADMIN_EMAILS__|${var.admin_emails}|g' \
           app.yaml.template > app.yaml
 
 variables:
@@ -61,6 +62,9 @@ variables:
   # SQL warehouse ID that the AI/BI dashboard runs its queries on. Bundle
   # deploy will fail until this is set -- either here in a target override or
   # via `databricks bundle deploy -t dev --var dashboard_warehouse_id=<id>`.
+  admin_emails:
+    description: Comma-separated admin emails (set in target or at deploy time)
+    default: ""
   dashboard_warehouse_id:
     description: SQL warehouse ID the demo dashboard queries against
     default: ""
