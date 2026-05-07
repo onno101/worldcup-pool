@@ -72,9 +72,9 @@ Points are awarded per match after results are synced. Knockout rounds are worth
 
 **Tournament winner:** +25 pts when the final result matches your champion pick.
 
-## Deploy in 5 commands
+## Quick deploy
 
-**Prerequisites:** A Databricks workspace with [Lakebase](https://docs.databricks.com/en/oltp/) enabled, [Databricks CLI](https://docs.databricks.com/en/dev-tools/cli/install.html), Node.js 18+, and an API token from [football-data.org](https://www.football-data.org/client/register) — see [API token tier](#api-token-tier) below for which plan to pick.
+**Prerequisites:** A Databricks workspace with [Lakebase](https://docs.databricks.com/en/oltp/) enabled, [Databricks CLI](https://docs.databricks.com/en/dev-tools/cli/install.html) (v0.285+), Node.js 18+, `psql` and `jq`, and an API token from [football-data.org](https://www.football-data.org/client/register) — see [API token tier](#api-token-tier) below for which plan to pick.
 
 ```bash
 # 1. Clone
@@ -87,12 +87,20 @@ databricks secrets put-secret worldcup_pool football_data_token --string-value "
 # 3. Deploy (builds the UI and deploys the app + sync job)
 databricks bundle deploy -t dev
 
-# 4. Start the app
+# 4. Grant the app's service principal access to Lakebase (one-time, idempotent)
+./scripts/bootstrap_lakebase_app.sh dev
+
+# 5. Start the app
 databricks bundle run worldcup_pool_app -t dev
 
-# 5. Set yourself as admin in the Databricks App environment settings:
+# 6. Set yourself as admin in the Databricks App environment settings:
 #    ADMIN_EMAILS = you@company.com
 ```
+
+> **Why step 4?** The Databricks App runs as its own service principal. Lakebase
+> requires that SP to be registered as a Postgres OAuth role and granted schema
+> permissions before the app can create its tables. The bootstrap script reads
+> the SP from the deployed app and provisions everything via the Lakebase API.
 
 The Lakebase endpoint defaults to `projects/worldcup-pool/branches/production/endpoints/primary`. Override with:
 ```bash
