@@ -970,9 +970,16 @@ export default function App() {
         <div className="hero-inner">
           <div className="powered-by-bar">
             <span className="powered-by-label">Powered by</span>
-            <img className="powered-by-logo" src="/logos/lakebase.svg" alt="Lakebase" />
+            <span className="powered-by-product">
+              <img className="powered-by-icon" src="/logos/lakebase.svg" alt="" />
+              Lakebase
+            </span>
             <span className="powered-by-sep">&</span>
-            <img className="powered-by-logo" src="/logos/databricks-apps.svg" alt="Databricks Apps" />
+            <span className="powered-by-product">
+              <img className="powered-by-icon" src="/logos/databricks-apps.svg" alt="" />
+              Databricks Apps
+            </span>
+            <img className="powered-by-dbx-logo" src="/logos/databricks-logo.png" alt="Databricks" />
           </div>
           <div className="hero-top">
             <div>
