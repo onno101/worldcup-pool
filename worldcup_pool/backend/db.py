@@ -387,6 +387,14 @@ def init_schema() -> None:
     ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS nationality TEXT;
     ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS expected_winner_team_code TEXT;
     ALTER TABLE user_profiles ADD COLUMN IF NOT EXISTS profile_picture TEXT;
+
+    CREATE TABLE IF NOT EXISTS pool_config (
+        id INT PRIMARY KEY DEFAULT 1 CHECK (id = 1),
+        custom_logo TEXT,
+        pool_name TEXT,
+        updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
+    );
+    INSERT INTO pool_config (id) VALUES (1) ON CONFLICT DO NOTHING;
     """
     engine = get_engine()
     with engine.connect() as conn:

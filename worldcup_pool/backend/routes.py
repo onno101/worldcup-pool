@@ -41,6 +41,8 @@ from worldcup_pool.backend.models_api import (
     TeamOptionOut,
     TournamentPredictionsIn,
     TournamentPredictionsOut,
+    PoolConfigIn,
+    PoolConfigOut,
     UserProfileIn,
     UserProfileOut,
     WorldcupPlayerOut,
@@ -1138,3 +1140,44 @@ def dev_seed_demo(user: UserContext = Depends(get_user_context)):
                     },
                 )
     return SyncOut(matches_synced=len(demo))
+
+
+# ── Pool config (custom logo / branding) ───────────────────────────
+
+
+@router.get("/pool-config", response_model=PoolConfigOut, operation_id="getPoolConfig")
+def get_pool_config(_user: UserContext = Depends(get_user_context)):
+    """Public pool configuration (custom logo, pool name)."""
+    with session_scope() as session:
+        try:
+            row = session.execute(text("SELECT custom_logo, pool_name FROM pool_config WHERE id = 1")).one_or_none()
+        except Exception:
+            session.rollback()
+            return PoolConfigOut()
+    if row is None:
+        return PoolConfigOut()
+    return PoolConfigOut(custom_logo=row[0], pool_name=row[1])
+
+
+@router.put("/admin/pool-config", response_model=PoolConfigOut, operation_id="putPoolConfig")
+def put_pool_config(
+    body: PoolConfigIn,
+    user: UserContext = Depends(get_user_context),
+):
+    """Admin-only: update pool branding (custom logo, pool name)."""
+    if not is_admin(user):
+        raise HTTPException(403, "Admin access required")
+    logo = (body.custom_logo or "").strip() or None
+    if logo and not logo.startswith("data:image/"):
+        raise HTTPException(400, "Logo must be a data:image/* URL (upload an image file)")
+    name = (body.pool_name or "").strip() or None
+    with session_scope() as session:
+        session.execute(text("""
+            INSERT INTO pool_config (id, custom_logo, pool_name, updated_at)
+            VALUES (1, :logo, :name, NOW())
+            ON CONFLICT (id) DO UPDATE SET
+                custom_logo = EXCLUDED.custom_logo,
+                pool_name = EXCLUDED.pool_name,
+                updated_at = NOW()
+        """), {"logo": logo, "name": name})
+    return PoolConfigOut(custom_logo=logo, pool_name=name)

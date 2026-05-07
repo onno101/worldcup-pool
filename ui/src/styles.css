@@ -88,12 +88,6 @@ body {
   font-size: 0.8rem;
   opacity: 0.5;
 }
-.powered-by-dbx-logo {
-  height: 24px;
-  margin-left: auto;
-  filter: brightness(0) invert(1);
-  opacity: 0.7;
-}
 
 .hero-top {
   display: grid;
@@ -597,6 +591,43 @@ tr:not(.locked) .lock-icon-slot {
 .profile-avatar-large.avatar-placeholder svg {
   width: 52%;
   height: 52%;
+}
+
+.admin-panel {
+  border: 1px dashed var(--dbx-accent);
+  background: var(--dbx-surface-2);
+}
+.admin-panel h2 {
+  color: var(--dbx-accent);
+}
+.custom-logo-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.custom-logo-preview-img {
+  max-height: 64px;
+  max-width: 200px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid var(--dbx-border);
+  padding: 0.25rem;
+  background: #fff;
+}
+.custom-logo {
+  max-height: 80px;
+  max-width: 160px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
+}
+.link-btn {
+  background: none;
+  border: none;
+  color: var(--dbx-accent);
+  cursor: pointer;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  padding: 0;
 }
 
 .group-standings-intro {

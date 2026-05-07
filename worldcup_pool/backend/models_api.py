@@ -226,3 +226,13 @@ class UserProfileOut(BaseModel):
     nationality: str | None = None
     profile_picture: str | None = None
     updated_at: datetime | None = None
+
+
+class PoolConfigOut(BaseModel):
+    custom_logo: str | None = None
+    pool_name: str | None = None
+
+
+class PoolConfigIn(BaseModel):
+    custom_logo: str | None = Field(default=None, max_length=1_500_000)
+    pool_name: str | None = Field(default=None, max_length=200)

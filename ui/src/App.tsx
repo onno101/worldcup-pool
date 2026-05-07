@@ -533,6 +533,9 @@ export default function App() {
   const [profilePicture, setProfilePicture] = useState("");
   const [mustCompleteProfile, setMustCompleteProfile] = useState(false);
 
+  const [customLogo, setCustomLogo] = useState<string | null>(null);
+  const [poolName, setPoolName] = useState<string | null>(null);
+
   const [loading, setLoading] = useState(true);
   // Convenience wrappers — these used to set banner state, now they push toasts
   const setMsg = useCallback((t: string | null) => { if (t) toast.push("ok", t); }, [toast]);
@@ -549,7 +552,7 @@ export default function App() {
     try {
       for (let attempt = 0; attempt < maxAttempts; attempt++) {
         try {
-          const [m, s, ma, tm, tr, pr, gr] = await Promise.all([
+          const [m, s, ma, tm, tr, pr, gr, pc] = await Promise.all([
             apiGet<MeOut>("/api/me"),
             apiGet<PoolSummaryOut>("/api/pool-summary"),
             apiGet<MatchOut[]>("/api/matches"),
@@ -557,6 +560,7 @@ export default function App() {
             apiGet<TournamentPredictionsOut>("/api/predictions/tournament"),
             apiGet<UserProfileOut>("/api/profile"),
             apiGet<GroupRostersResponse>("/api/group-rosters").catch(() => ({ groups: [] })),
+            apiGet<{ custom_logo: string | null; pool_name: string | null }>("/api/pool-config").catch(() => ({ custom_logo: null, pool_name: null })),
           ]);
           if (seq !== loadSeq.current) {
             return;
@@ -568,6 +572,8 @@ export default function App() {
           setTournament(tr);
           setProfile(pr);
           setGroupRosters(gr);
+          setCustomLogo(pc.custom_logo);
+          setPoolName(pc.pool_name);
 
           // Sync draft / tournament / profile form fields with this response **before** awaiting
           // `/api/dashboard`. A concurrent `load()` can bump `loadSeq` during that await; if we then
@@ -979,7 +985,6 @@ export default function App() {
               <img className="powered-by-icon" src="/logos/databricks-apps.svg" alt="" />
               Databricks Apps
             </span>
-            <img className="powered-by-dbx-logo" src="/logos/databricks-logo.png" alt="Databricks" />
           </div>
           <div className="hero-top">
             <div>
@@ -1010,6 +1015,9 @@ export default function App() {
               )}
             </div>
             <div className="hero-brand-logos" aria-label="World Cup 2026 branding">
+              {customLogo && (
+                <img className="hero-logo custom-logo" src={customLogo} alt={poolName || "Organization logo"} />
+              )}
               <img
                 className="hero-logo wc-logo"
                 src="/logos/wc2026.svg"
@@ -1595,6 +1603,62 @@ export default function App() {
                 Save profile
               </button>
             </div>
+          </div>
+        </section>
+      )}
+
+      {!loading && tab === "profile" && me?.is_admin && (
+        <section className="panel admin-panel">
+          <h2>Pool customization</h2>
+          <p className="muted">
+            Upload your company logo to brand this pool. Only admins can change this.
+          </p>
+          <div className="form-grid">
+            <label>
+              Pool name (optional)
+              <input
+                type="text"
+                value={poolName ?? ""}
+                onChange={(e) => setPoolName(e.target.value || null)}
+                placeholder="e.g. Acme Corp World Cup 2026"
+              />
+            </label>
+            <label>
+              Company / organization logo
+              <input
+                type="file"
+                accept="image/*"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (!file) return;
+                  if (!file.type.startsWith("image/")) { setErr("Please choose an image file."); return; }
+                  const reader = new FileReader();
+                  reader.onload = () => setCustomLogo(String(reader.result || ""));
+                  reader.onerror = () => setErr("Could not read image file.");
+                  reader.readAsDataURL(file);
+                }}
+              />
+            </label>
+            {customLogo && (
+              <div className="custom-logo-preview">
+                <img src={customLogo} alt="Logo preview" className="custom-logo-preview-img" />
+                <button type="button" className="link-btn" onClick={() => setCustomLogo(null)}>Remove logo</button>
+              </div>
+            )}
+            <button
+              type="button"
+              className="primary"
+              onClick={async () => {
+                try {
+                  await apiPut("/api/admin/pool-config", { custom_logo: customLogo, pool_name: poolName });
+                  setMsg("Pool branding saved!");
+                } catch (e) {
+                  setErr(e instanceof Error ? e.message : String(e));
+                }
+              }}
+            >
+              Save pool branding
+            </button>
           </div>
         </section>
       )}
