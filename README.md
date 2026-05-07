@@ -74,7 +74,7 @@ Points are awarded per match after results are synced. Knockout rounds are worth
 
 ## Deploy in 5 commands
 
-**Prerequisites:** A Databricks workspace with [Lakebase](https://docs.databricks.com/en/oltp/) enabled, [Databricks CLI](https://docs.databricks.com/en/dev-tools/cli/install.html), Node.js 18+, and a free API token from [football-data.org](https://www.football-data.org/client/register).
+**Prerequisites:** A Databricks workspace with [Lakebase](https://docs.databricks.com/en/oltp/) enabled, [Databricks CLI](https://docs.databricks.com/en/dev-tools/cli/install.html), Node.js 18+, and an API token from [football-data.org](https://www.football-data.org/client/register) — see [API token tier](#api-token-tier) below for which plan to pick.
 
 ```bash
 # 1. Clone
@@ -100,6 +100,20 @@ databricks bundle deploy -t dev --var lakebase_endpoint="projects/YOUR_PROJECT/b
 ```
 
 > **Create a Lakebase project first** if you don't have one yet: in the Databricks UI, go to **Catalog > Lakebase > Create project**.
+
+### API token tier
+
+The pool uses [football-data.org](https://www.football-data.org/) for fixtures, live scores, and goal scorers. Pick your plan based on which features you want:
+
+| Plan | Cost | Fixtures & live scores | Goal scorer events |
+|------|------|------------------------|--------------------|
+| **Free Tier** | Free | Yes | No — scorer points won't be awarded |
+| **Free + Deep Data** | Free (requires application) | Yes | Yes — required for top-scorer scoring |
+| Paid tiers | Paid | Yes | Yes |
+
+If you want the **top scorer** picks and the per-match scorer points to actually score, you need the **Free + Deep Data** key (or a paid tier). The standard free key returns matches and scores but omits the goal-event detail the sync job needs to credit scorer points.
+
+Apply for Deep Data access from your account page after registering at [football-data.org/client/register](https://www.football-data.org/client/register). Without it, the app still runs — outcome / exact-score / advancer points all work, but every match's `scorer` column will be 0.
 
 ## Configuration
 
