@@ -80,12 +80,13 @@ Points are awarded per match after results are synced. Knockout rounds are worth
 # 1. Clone
 git clone https://github.com/onnovanderhorst/worldcup-pool.git && cd worldcup-pool
 
-# 2. Store your football-data.org API token
+# 2. Store your football-data.org API token as a Databricks secret
+#    (used by the 5-minute scheduled sync job)
 databricks secrets create-scope worldcup_pool
 databricks secrets put-secret worldcup_pool football_data_token --string-value "YOUR_TOKEN"
 
-# 3. Deploy (builds the UI and deploys the app + sync job)
-databricks bundle deploy -t dev
+# 3. Deploy — pass your email as admin so you can manage the pool
+databricks bundle deploy -t dev --var admin_emails=you@company.com
 
 # 4. Grant the app's service principal access to Lakebase (one-time, idempotent)
 ./scripts/bootstrap_lakebase_app.sh dev
@@ -93,14 +94,29 @@ databricks bundle deploy -t dev
 # 5. Start the app
 databricks bundle run worldcup_pool_app -t dev
 
-# 6. Set yourself as admin in the Databricks App environment settings:
-#    ADMIN_EMAILS = you@company.com
+# 6. In the Databricks App UI → Environment, set FOOTBALL_DATA_TOKEN to your
+#    football-data.org token. This enables in-app live sync (faster than the
+#    5-min job) and unlocks the admin "Sync now" button.
 ```
 
-> **Why step 4?** The Databricks App runs as its own service principal. Lakebase
-> requires that SP to be registered as a Postgres OAuth role and granted schema
-> permissions before the app can create its tables. The bootstrap script reads
-> the SP from the deployed app and provisions everything via the Lakebase API.
+> **Step 3 — admin emails must be set at deploy time.** `--var admin_emails`
+> writes `ADMIN_EMAILS` into the app environment so you can access admin
+> endpoints (config, logo upload, manual sync). For multiple admins, pass a
+> comma-separated list: `--var admin_emails=alice@x.com,bob@x.com`. You can
+> re-run `bundle deploy` with a different value any time; the script in the
+> next step is idempotent so it won't redo work.
+
+> **Why step 4?** The Databricks App runs as its own service principal.
+> Lakebase requires that SP to be registered as a Postgres OAuth role and
+> granted schema permissions before the app can create its tables. The
+> bootstrap script reads the SP from the deployed app and provisions
+> everything via the Lakebase API.
+
+> **Why step 6 is a UI step.** The scheduled sync job reads
+> `FOOTBALL_DATA_TOKEN` from your secret scope (step 2), so matches will
+> populate within ~5 minutes regardless. Setting the token directly on the
+> app speeds up first sync and lets the in-app admin "Sync now" button work
+> immediately. If you'd rather wait for the cron, you can skip step 6.
 
 The Lakebase endpoint defaults to `projects/worldcup-pool/branches/production/endpoints/primary`. Override with:
 ```bash
