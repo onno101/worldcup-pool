@@ -94,9 +94,6 @@ databricks bundle deploy -t dev --var admin_emails=you@company.com
 # 5. Start the app
 databricks bundle run worldcup_pool_app -t dev
 
-# 6. In the Databricks App UI → Environment, set FOOTBALL_DATA_TOKEN to your
-#    football-data.org token. This enables in-app live sync (faster than the
-#    5-min job) and unlocks the admin "Sync now" button.
 ```
 
 > **Step 3 — admin emails must be set at deploy time.** `--var admin_emails`
