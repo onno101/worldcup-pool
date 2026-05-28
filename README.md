@@ -78,7 +78,7 @@ Points are awarded per match after results are synced. Knockout rounds are worth
 
 ```bash
 # 1. Clone
-git clone https://github.com/onnovanderhorst/worldcup-pool.git && cd worldcup-pool
+git clone https://github.com/onno101/worldcup-pool.git && cd worldcup-pool
 
 # 2. Store your football-data.org API token as a Databricks secret
 #    (used by the 5-minute scheduled sync job)
@@ -157,11 +157,21 @@ See `.env.example` for a complete template.
 
 ## Bundle targets
 
-| Target | Purpose |
-|--------|---------|
-| `dev` | Active development (default) |
-| `simulation` | Pre-populated demo with 150 simulated users |
-| `prod` | Production deployment |
+Three targets ship in `databricks.yml`. Pick the one that matches what you're doing — they differ in which Lakebase branch they point at, whether predictions are still open, and whether schema init / fixture sync run on cold start.
+
+| Target | When to use | Tournament lock | Auto-sync fixtures | Init schema on start | Mode |
+|--------|-------------|-----------------|--------------------|----------------------|------|
+| `dev` (default) | Active development, internal testing, your real company pool | `2026-06-11T18:00:00Z` (first kickoff) | `true` | `true` | development |
+| `simulation` | Demoing what a finished pool looks like — 150 simulated users with picks already submitted | `2026-04-01T00:00:00Z` (already past — picks read-only) | `false` (uses pre-seeded data) | `false` | development |
+| `prod` | Production deployment for your live pool | `2026-06-11T18:00:00Z` | `true` | `true` | production (locks workspace path, requires explicit deploy) |
+
+**`dev`** is the default and the lightweight option. Use it to test UI changes, try out scoring tweaks, run through the prediction flow, and generally play with the app. Deploys with a bare `databricks bundle deploy` — no flags needed. **If you don't plan to fork the code or customize much, `dev` is perfectly fine as your real, live company pool too** — share its URL, invite your team, you're done.
+
+**`simulation`** is for showing the pool off before the tournament starts — recruiters, leadership, internal demos. It points at a separate Lakebase branch (`branches/simulation`) so it doesn't pollute your real pool's data, and tournament picks are already locked, so visitors see a fully populated leaderboard immediately. To populate the simulated users, run `scripts/simulate_data.py` against the simulation Lakebase after deploy.
+
+**`prod`** is mostly a naming convention — it deploys an app called `worldcup-pool-prod` (separate URL from `-dev`) and runs under Databricks Asset Bundle `production` mode. As shipped, that mode mainly affects bundle-side validation (rejects deploys to per-user paths, requires `run_as` on jobs) — it doesn't restrict who can update the app or lock down the deployment. The real value is just having two side-by-side namespaces: a stable URL you share with your team, and a scratch URL for trying changes without breaking the first one. **If you're not iterating on the code, you don't need `prod` at all — `dev` is fine as your live pool.** If you do want stronger production guardrails (workspace path locking, permissions, service-principal `run_as`), add them to the `prod` target yourself.
+
+All three targets accept `--var lakebase_endpoint=projects/<your-project>/branches/<your-branch>/endpoints/primary` to point at your own Lakebase project. The defaults in `databricks.yml` use placeholder values that you'll need to override.
 
 ## Architecture
 
@@ -223,6 +233,22 @@ databricks bundle run worldcup_sync_matches -t dev
 ```
 
 This deploys a sync task that mirrors four tables into Unity Catalog Delta, plus a dashboard with KPIs, champion pick distribution, and prediction activity.
+
+## Troubleshooting
+
+### `npm ci` fails during deploy
+
+The committed `ui/package-lock.json` resolves packages from `registry.npmjs.org` (pinned via `ui/.npmrc`). If your local network can't reach the public npm registry — for example, you're behind a corporate proxy that only allows an internal mirror — the predeploy step will fail.
+
+To regenerate the lockfile against whichever registry your machine can reach:
+
+```bash
+rm -rf ui/node_modules ui/package-lock.json
+cd ui && npm install && cd ..
+databricks bundle deploy -t dev --var admin_emails=you@company.com
+```
+
+The regenerated lockfile is local-only; don't commit it back if it now references an internal mirror, since that would break deploys for other people on different networks.
 
 ## License
 

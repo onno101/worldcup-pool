@@ -1,9 +1,6 @@
 bundle:
   name: worldcup-pool
 
-workspace:
-  profile: DEFAULT
-
 include:
   - resources/*.yml
 
@@ -36,8 +33,8 @@ experimental:
 
 variables:
   lakebase_endpoint:
-    description: Full Lakebase Autoscale endpoint resource name
-    default: "projects/worldcup-pool/branches/production/endpoints/primary"
+    description: Full Lakebase Autoscale endpoint resource name. Override at deploy time with `--var lakebase_endpoint=projects/<your-project>/branches/production/endpoints/primary`.
+    default: "projects/<your-project>/branches/production/endpoints/primary"
   football_data_competition:
     default: "WC"
   auto_sync:
@@ -78,7 +75,7 @@ targets:
   simulation:
     mode: development
     variables:
-      lakebase_endpoint: "projects/worldcup-pool/branches/simulation/endpoints/primary"
+      lakebase_endpoint: "projects/<your-project>/branches/simulation/endpoints/primary"
       auto_sync: "false"
       init_schema: "false"
       tournament_lock: "2026-04-01T00:00:00+00:00"
