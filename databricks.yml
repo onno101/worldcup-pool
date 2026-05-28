@@ -1,9 +1,6 @@
 bundle:
   name: worldcup-pool
 
-workspace:
-  profile: DEFAULT
-
 include:
   - resources/*.yml
 
@@ -36,8 +33,8 @@ experimental:
 
 variables:
   lakebase_endpoint:
-    description: Full Lakebase Autoscale endpoint resource name
-    default: "projects/worldcup-pool/branches/production/endpoints/primary"
+    description: Full Lakebase Autoscale endpoint resource name. Override at deploy time with `--var lakebase_endpoint=projects/<your-project>/branches/production/endpoints/primary`.
+    default: "projects/<your-project>/branches/production/endpoints/primary"
   football_data_competition:
     default: "WC"
   auto_sync:
@@ -63,7 +60,10 @@ variables:
   # deploy will fail until this is set -- either here in a target override or
   # via `databricks bundle deploy -t dev --var dashboard_warehouse_id=<id>`.
   admin_emails:
-    description: Comma-separated admin emails (set in target or at deploy time)
+    # For a single admin you can pass `--var admin_emails=you@company.com` on the CLI.
+    # For multiple admins, set this in a target's `variables:` block below (the
+    # Databricks CLI does not reliably forward comma-separated values through `--var`).
+    description: Comma-separated admin emails. For >1 admin, set in target.variables, not via --var.
     default: ""
   dashboard_warehouse_id:
     description: SQL warehouse ID the demo dashboard queries against
@@ -74,11 +74,15 @@ targets:
     default: true
     mode: development
     # Set dashboard_warehouse_id via: databricks bundle deploy -t dev --var dashboard_warehouse_id=<YOUR_ID>
+    # To run with multiple admins, uncomment and edit the block below. Commas in
+    # this YAML value are fine; commas in `--var admin_emails=...` are not.
+    # variables:
+    #   admin_emails: "alice@company.com,bob@company.com"
 
   simulation:
     mode: development
     variables:
-      lakebase_endpoint: "projects/worldcup-pool/branches/simulation/endpoints/primary"
+      lakebase_endpoint: "projects/<your-project>/branches/simulation/endpoints/primary"
       auto_sync: "false"
       init_schema: "false"
       tournament_lock: "2026-04-01T00:00:00+00:00"
