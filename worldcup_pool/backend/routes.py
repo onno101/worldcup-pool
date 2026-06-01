@@ -930,10 +930,11 @@ def list_worldcup_players(q: str = "", _user: UserContext = Depends(get_user_con
     settings = get_settings()
     comp = (settings.football_data_competition or "WC").strip()
     rows = get_worldcup_player_directory(settings.football_data_token, comp)
-    if not (q or "").strip():
-        rows = rows[:800]
-    else:
+    if (q or "").strip():
         rows = filter_player_directory(rows, q, limit=200)
+    # else: return the full directory. The client loads it once and filters in-browser,
+    # so every squad must be present — a row cap here silently drops late-alphabet nations
+    # (Spain, Sweden, USA, Uruguay, Uzbekistan, ...) once the directory exceeds the cap.
     return [WorldcupPlayerOut(**r) for r in rows]
 
 
