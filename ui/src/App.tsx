@@ -961,6 +961,17 @@ export default function App() {
       setErr("Please choose an image file for profile picture.");
       return;
     }
+    // ~1 MB. Larger images blow past the server's data-URL size limit and the upload
+    // fails; catch it here so the user gets a clear message before any round-trip.
+    const MAX_PICTURE_BYTES = 1_000_000;
+    if (file.size > MAX_PICTURE_BYTES) {
+      setErr(
+        "Profile picture is too large (over 1 MB). Please compress it or resize to " +
+          "around 256×256 pixels, then choose it again.",
+      );
+      return;
+    }
+    setErr(null);
     const reader = new FileReader();
     reader.onload = () => {
       const result = String(reader.result || "");

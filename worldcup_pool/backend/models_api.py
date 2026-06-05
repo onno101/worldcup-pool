@@ -217,7 +217,10 @@ class UserProfileIn(BaseModel):
     display_name: str | None = Field(default=None, max_length=120)
     nationality: str | None = Field(default=None, max_length=80)
     # Data URL generated from the uploaded file input (e.g. data:image/png;base64,...).
-    profile_picture: str | None = Field(default=None, max_length=1_500_000)
+    # This is only a hard safety ceiling to reject unbounded payloads. The user-facing
+    # size limit and its friendly "too large / please compress" message live in
+    # routes._validate_profile_picture so the client gets a clear 400 instead of a raw 422.
+    profile_picture: str | None = Field(default=None, max_length=8_000_000)
 
 
 class UserProfileOut(BaseModel):

@@ -190,7 +190,13 @@ def _validate_profile_picture(value: str | None) -> str | None:
     if v is None:
         return None
     if len(v) > 1_500_000:
-        raise HTTPException(status_code=400, detail="Profile picture is too large")
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                "Profile picture is too large. Please upload an image under 1 MB — "
+                "try compressing it or resizing to around 256×256 pixels, then save again."
+            ),
+        )
     if v.startswith("data:image/"):
         return v
     raise HTTPException(status_code=400, detail="Profile picture must be an uploaded image")
