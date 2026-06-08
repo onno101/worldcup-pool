@@ -8,6 +8,7 @@ _TEAM_TLA_CANONICAL: dict[str, str] = {
     "DEU": "GER",  # ISO alpha-3 vs common football abbreviation
     "HOL": "NED",  # Historic Netherlands
     "SCT": "SCO",  # Scotland alternate in some feeds
+    "URY": "URU",  # football-data.org uses ISO alpha-3 URY; FIFA/pool uses URU
 }
 
 
