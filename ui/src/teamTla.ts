@@ -7,6 +7,7 @@ const TEAM_TLA_CANONICAL: Record<string, string> = {
   DEU: "GER",
   HOL: "NED",
   SCT: "SCO",
+  URY: "URU", // football-data.org uses ISO alpha-3 URY; FIFA/pool uses URU
 };
 
 export function canonicalTeamTla(raw: string | null | undefined): string {
